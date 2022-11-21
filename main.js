@@ -32,12 +32,21 @@ const teamMembers = [
         'image': 'barbara-ramos-graphic-designer.jpg'
     },
 ];
+let createDiv;
+let memberIesimo;
+let container = document.getElementById('container');
+
 
 // for per array e per oggetti
 for (let i = 0; i < teamMembers.length; i++) {
-    let memberIesimo = teamMembers[i];
+    createDiv = document.createElement('div');
+
+    memberIesimo = teamMembers[i];
     // console.log(memberIesimo);
-    for (let details in teamMembers[i]) {
-        console.log(`${details}: ${teamMembers[i][details]}`);
+
+    for (let details in memberIesimo) {
+        createDiv.append(`${memberIesimo[details]}; `);
+        container.append(createDiv);
+        console.log(`${details}: ${memberIesimo[details]}`);
     }
 }
