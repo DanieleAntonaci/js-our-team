@@ -31,4 +31,13 @@ const teamMembers = [
         'role': 'Graphic Designer',
         'image': 'barbara-ramos-graphic-designer.jpg'
     },
-] 
+];
+
+// for per array e per oggetti
+for (let i = 0; i < teamMembers.length; i++) {
+    let memberIesimo = teamMembers[i];
+    // console.log(memberIesimo);
+    for (let details in teamMembers[i]) {
+        console.log(`${details}: ${teamMembers[i][details]}`);
+    }
+}
